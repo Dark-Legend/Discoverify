@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main .card {
+  width: 1000px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .card .left {
+  background-color: hsl(244, 38%, 16%);
+  width: 500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 50px;
+}
+
+.main .card .right {
+  width: 500px;
+  height: 400px;
+  background-image: url(images/image-header-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: hsl(277, 64%, 61%);
+  overflow: hidden;
+  background-blend-mode: multiply;
+}
+
+.container {
+  width: 500px;
+  height: 400px;
+  margin-left: 100px;
+  position: relative;
+}
+
+.main .card .left .container .heading {
+  font-size: 30px;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.main .card .left .container .heading span {
+  color: hsl(277, 64%, 61%);
+}
+
+.main .card .left .container .content {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+.main .card .left .container .stat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.main .card .left .container .stat .stats1 {
+  margin-right: 50px;
+}
+
+.main .card .left .container .stat .stats1 h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+.main .card .left .container .stat .stats1 p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* ----------------MEDIA QUERY FOR MOBILE--------------  */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    .main .card{
+        height: 700px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .main .card .right{
+        height: 200px;
+        width: 300px;
+        background-image: url(images/image-header-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .main .card .left{
+        width: 300px;
+        height: 501px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .main .card .left .container{
+        position: relative;
+    }
+    .main .card .left .container .heading{
+        font-size: 25px;
+        position: absolute;
+        left: 86px;
+        top: -20px;
+        text-align: center;
+    }
+
+    .main .card .left .container .content{
+        position: absolute;
+        top: 90px;
+        left: 70px;
+        text-align: center;
+        line-height: 25px;
+    }
+    .main .card .left .container .stat{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 144px;
+        top: 230px;
+    }
+    .main .card .left .container .stat .stats1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .main .card .left .container .stat .stats1 p{
+        font-size: 12px;
+        margin: 5px;
+    }
+}
